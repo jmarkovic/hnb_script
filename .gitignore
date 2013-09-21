@@ -1,0 +1,2 @@
+#ignore project (dev) directories
+node_modules/
