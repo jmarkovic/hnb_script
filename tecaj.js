@@ -8,9 +8,19 @@ var CurrencyTable = function(dateMade, dateDisplay, currency) {
 	this.currency = currency;
 	return this;
 }
+var usedDate = '';
+var d = new Date();
 
-var dateString = function() {
-	var date = new Date();
+/* Returns a string representing a date in 'ddMMyy'
+	string format. */
+var dateString = function(pDate) {
+	var date;
+	// If no parameter is provided, use TODAY date
+	if (typeof pDate === 'undefined') {
+		var date = new Date();
+	} else {
+		date = pDate;
+	}
 	var string = "";
 
 	var day = date.getDate();
@@ -19,14 +29,12 @@ var dateString = function() {
 	} else {
 		string += day;
 	}
-
 	var month = date.getMonth() + 1;
 	if (month < 10) {
 		string += ('0' + month);
 	} else {
 		string += month;
 	}
-
 	var year = date.getFullYear() % 100;
 	string += year;
 	return string;
@@ -58,19 +66,35 @@ var parseBody = function(body) {
 	var dateDisplay = rowLines[0].substring(11, 19);
 	var table = new CurrencyTable(dateMade, dateDisplay, currencies);
 
+	// Currently, result is only displayed to console
 	console.log(table);
 }
 
+/* Callback function called on request.
+	Checks if any 'checked' error has occured,
+	and if so, displays proper message. If request
+	was successful, parse method is called.
+	Ambiguous error message is displayed when
+	something wrong happened. */
 var callback = function (error, response, body) {
-  	if (!error && response.statusCode == 200) {
-    	console.log(body);
-    	parseBody(body);
-  	} else {
+	if (error) {
+		console.log(error);
+	} else if (response.statusCode == 404) {
+		console.log("No document found under provided date. Trying day before");
+		d = new Date();
+		d.setDate(d.getDate() - 1);
+		usedDate = dateString(d);
+		var link = "http://www.hnb.hr/tecajn/f" + usedDate + ".dat";
+		request(link, callback);
+	} else if (!error && response.statusCode == 200) {
+		console.log(body);
+		parseBody(body);
+	} else {
 		console.log("Error has occured");
 	}
 }
 
-var link = "http://www.hnb.hr/tecajn/f" + dateString() + ".dat"
-console.log(link);
+usedDate = dateString(d);
+var link = "http://www.hnb.hr/tecajn/f" + usedDate + ".dat";
 
 request(link, callback);

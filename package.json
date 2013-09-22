@@ -10,5 +10,9 @@
   "license": "MIT",
   "dependencies": {
     "request": "~2.27.x",
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
 }
