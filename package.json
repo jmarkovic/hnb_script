@@ -4,7 +4,7 @@
   "author":"Josip Marković <josip.markovic09@gmail.com>",
   "contributors": {
     "name":"Alen Genzić",
-    "email":""
+    "email":"theeskhaton@gmail.com"
   },
   "description": "Fetches currency data fron HNB and makes it available over API",
   "license": "MIT",
@@ -13,6 +13,6 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
-  },
+    "url": "https://github.com/PrimaxLite/hnb_script"
+  }
 }
