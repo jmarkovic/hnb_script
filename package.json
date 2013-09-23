@@ -1,15 +1,16 @@
 {
   "name": "hnb_script",
   "version": "0.1.0",
-  "author":"Josip Marković <josip.markovic09@gmail.com>",
+  "author": "Josip Marković <josip.markovic09@gmail.com>",
   "contributors": {
-    "name":"Alen Genzić",
-    "email":"theeskhaton@gmail.com"
+    "name": "Alen Genzić",
+    "email": "theeskhaton@gmail.com"
   },
   "description": "Fetches currency data fron HNB and makes it available over API",
   "license": "MIT",
   "dependencies": {
     "request": "~2.27.x",
+    "winston": "~0.7.2"
   },
   "repository": {
     "type": "git",
