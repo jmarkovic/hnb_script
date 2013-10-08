@@ -1,5 +1,7 @@
 var logger = require('winston'),
     request = require("request"),
+    db = require('./lib/db');
+    models = require('./lib/models')
     usedDate = '',
     d = new Date(),
 /* Returns a string representing a date in 'ddMMyy'
@@ -25,6 +27,7 @@ var logger = require('winston'),
         } else if (!error && response.statusCode == 200) {
             logger.log('info', body);
             logger.log('info',JSON.stringify(parseBody(body)));
+            db.saveIt(parseBody(body));
         } else {
             logger.log('error',"Error has occured");
         }
