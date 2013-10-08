@@ -10,7 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "request": "~2.27.x",
-    "winston": "~0.7.2"
+    "winston": "~0.7.2",
+    "mongoose": "~3.6.x"
   },
   "repository": {
     "type": "git",
