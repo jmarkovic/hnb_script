@@ -13,7 +13,6 @@ var logger = require('winston'),
 	was successful, parse method is called.
 	Ambiguous error message is displayed when
 	something wrong happened. */
-    d = new Date(),
     callback = function (error, response, body) {
         if (error) {
             logger.log(error);
