@@ -24,14 +24,14 @@ var logger = require('winston'),
             var link = "http://www.hnb.hr/tecajn/f" + usedDate + ".dat";
             request(link, callback);
         } else if (!error && response.statusCode == 200) {
-            logger.log('info', body);
             logger.log('info',JSON.stringify(parseBody(body)));
         } else {
             logger.log('error',"Error has occured");
         }
     }
 
-usedDate = process.argv[2] || dateString(d);
-var link = "http://www.hnb.hr/tecajn/f" + usedDate + ".dat";
-
-request(link, callback);
+module.exports = { getTecaj : function(date, results) {
+    usedDate = date || dateString(d);
+    var link = "http://www.hnb.hr/tecajn/f" + usedDate + ".dat";
+    request(link, callback); }
+}

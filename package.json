@@ -1,20 +1,34 @@
 {
   "name": "hnb_script",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Josip Marković <josip.markovic09@gmail.com>",
   "contributors": {
     "name": "Alen Genzić",
     "email": "theeskhaton@gmail.com"
   },
   "description": "Fetches currency data fron HNB and makes it available over API",
-  "license": "MIT",
+  "license": "BSD-2-Clause",
   "dependencies": {
     "request": "~2.27.x",
-    "winston": "~0.7.2",
-    "mongoose": "~3.6.x"
+    "winston": "~0.7.2"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/PrimaxLite/hnb_script"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/PrimaxLite/hnb_script/issues"
+  },
+  "main": "tecaj.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hnb",
+    "script",
+    "tecaj",
+    "tecajna",
+    "lista"
+  ]
 }
