@@ -31,7 +31,7 @@ var logger = require('winston'),
         }
     }
 
-usedDate = dateString(d);
+usedDate = process.argv[2] || dateString(d);
 var link = "http://www.hnb.hr/tecajn/f" + usedDate + ".dat";
 
 request(link, callback);
