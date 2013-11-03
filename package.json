@@ -1,7 +1,10 @@
 {
   "name": "hnb_script",
-  "version": "0.1.1",
-  "author": "Josip Marković <josip.markovic09@gmail.com>",
+  "version": "0.1.2",
+  "author": {
+    "name": "Josip Marković",
+    "email": "josip.markovic09@gmail.com"
+  },
   "contributors": {
     "name": "Alen Genzić",
     "email": "theeskhaton@gmail.com"
