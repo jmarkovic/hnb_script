@@ -1,6 +1,6 @@
 hnb_script
 ==========
-
+[![Build Status](https://travis-ci.org/TheEskhaton/hnb_script.png)](https://travis-ci.org/TheEskhaton/hnb_script)
 Introduction
 ------------
 
