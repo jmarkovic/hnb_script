@@ -28,7 +28,7 @@
     "mocha": "~1.14.0"
   },
   "scripts": {
-    "test": "mocha ./test/tests.js"
+    "test": "mocha -R spec ./test/tests.js"
   },
   "keywords": [
     "hnb",
