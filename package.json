@@ -23,9 +23,12 @@
     "url": "https://github.com/PrimaxLite/hnb_script/issues"
   },
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "should": "~2.0.2",
+    "mocha": "~1.14.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -R spec ./test/tests.js"
   },
   "keywords": [
     "hnb",
