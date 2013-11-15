@@ -1,6 +1,16 @@
 hnb_script
 ==========
 [![Build Status](https://travis-ci.org/TheEskhaton/hnb_script.png)](https://travis-ci.org/TheEskhaton/hnb_script)
+Contributors
+------------
+[Josip Marković](mailto:josip.markovic09@gmail.com)
+
+   | Twitter [@markovicdev](https://twitter.com/markovicdev)
+   
+[Alen Genzić](mailto:theeskhaton@gmail.com)
+
+   | Twitter [@TheEskhaton1](https://twitter.com/TheEskhaton1)
+
 Introduction
 ------------
 
@@ -75,7 +85,11 @@ base and tier are always from target currency and not Kuna.
 Installation
 ------------
 
-Currently, this script is only available by cloning this repository:
+You can either clone this repository:
 ```
 git clone https://github.com/PrimaxLite/hnb_script.git
+```
+or install it using npm:
+```
+npm install hnb_script
 ```
